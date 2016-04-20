@@ -1,0 +1,110 @@
+﻿@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,300&subset=latin-ext);
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var, b, u, i, center,dl, dt, dd, ol, ul, li, fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; /*vertical-align: baseline; -webkit-font-smoothing: antialiased; -webkit-touch-callout: none;-webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none; */}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+body { line-height: 1; font-family: arial;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,q:before, q:after {content: '';content: none;}
+table {border-collapse: collapse;border-spacing: 0;}
+img { background: transparent; -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF)";filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF); zoom: 1; }
+textarea:focus, input:focus{outline: 0;resize: none;}
+textarea, input{resize: none; }
+
+// CONTAINER SIZE
+  $container-width: 900px;
+
+// COLORS
+  // LINKS
+    $link-color: #333;
+    $link-hover-color: #999;
+    $link-active-color: #1aa;
+  // TEXT
+    $text-color: #222;
+
+// FONTS
+  // FONT FAMILY
+    $font-normal: 'arial', sans-serif;
+    $font-bold: 'arial', sans-serif;
+    $font-headline: 'arial', sans-serif;
+  // FONT SIZE
+    $content-font-size: 12px;
+    $headline-font-size: 12px;
+
+//****//
+
+// BASE 
+  .posfix {
+    position: relative;
+  }
+  .hidden {
+    overflow: hidden;
+  }
+  .nopointerevent, .pointerevent, .pointernone {
+    pointer-events: none;
+  }
+  [data-link], [data-function]  {
+    cursor: pointer;
+  }
+  .clear {
+    clear: both;
+  }
+
+
+// LAYOUT
+  body  {
+    @extend .font-normal;
+    -webkit-font-smoothing:antialiased;
+    overflow-x: hidden;
+    font-family: 'Open Sans';
+    background: #efefef;
+  }
+
+  .container {
+    width:  $container-width;
+    display: block;
+    position: relative;
+    margin: auto;
+    text-align: center;
+    min-height: 400px;
+  }
+
+  header {
+    height: 80px;
+    padding-top: 10px;
+    overflow: hidden;
+    line-height: 80px;
+    display: block;
+    color: #fff;
+    font-size: 50px;
+    font-family: 'Open Sans';
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e35151), color-stop(100%, #e65b5a));
+    background-image: -moz-linear-gradient(#e35151, #e65b5a);
+    background-image: -webkit-linear-gradient(#e35151, #e65b5a);
+    background-image: linear-gradient(#e35151, #e65b5a);
+    font-weight: 700;
+    text-shadow: 0px 0px 0 #c4504e,1px 1px 0 #c4504e,2px 2px 0 #c4504e,3px 3px 0 #c4504e,4px 4px 0 #c4504e,5px 5px 0 #c4504e,6px 6px 0 #c4504e,7px 7px 0 #c4504e,8px 8px 0 #c4504e,9px 9px 0 #c4504e,10px 10px 0 #c4504e,11px 11px 0 #c4504e,12px 12px 0 #c4504e,13px 13px 0 #c4504e,14px 14px 0 #c4504e,15px 15px 0 #c4504e,16px 16px 0 #c4504e,17px 17px 0 #c4504e,18px 18px 0 #c4504e,19px 19px 0 #c4504e,20px 20px 0 #c4504e,21px 21px 0 #c4504e,22px 22px 0 #c4504e,23px 23px 0 #c4504e,24px 24px 0 #c4504e,25px 25px 0 #c4504e,26px 26px 0 #c4504e,27px 27px 0 #c4504e,28px 28px 0 #c4504e,29px 29px 0 #c4504e,30px 30px 0 #c4504e,31px 31px 0 #c4504e,32px 32px 0 #c4504e,33px 33px 0 #c4504e,34px 34px 0 #c4504e,35px 35px 0 #c4504e,36px 36px 0 #c4504e,37px 37px 0 #c4504e,38px 38px 0 #c4504e,39px 39px 0 #c4504e,40px 40px 0 #c4504e,41px 41px 0 #c4504e,42px 42px 0 #c4504e,43px 43px 0 #c4504e,44px 44px 0 #c4504e,45px 45px 0 #c4504e,46px 46px 0 #c4504e,47px 47px 0 #c4504e,48px 48px 0 #c4504e,1px 1px 0 rgba(196, 80, 78, 0.98),2px 2px 0 rgba(196, 80, 78, 0.96),3px 3px 0 rgba(196, 80, 78, 0.94),4px 4px 0 rgba(196, 80, 78, 0.92),5px 5px 0 rgba(196, 80, 78, 0.9),6px 6px 0 rgba(196, 80, 78, 0.88),7px 7px 0 rgba(196, 80, 78, 0.86),8px 8px 0 rgba(196, 80, 78, 0.84),9px 9px 0 rgba(196, 80, 78, 0.82),10px 10px 0 rgba(196, 80, 78, 0.8),11px 11px 0 rgba(196, 80, 78, 0.78),12px 12px 0 rgba(196, 80, 78, 0.76),13px 13px 0 rgba(196, 80, 78, 0.74),14px 14px 0 rgba(196, 80, 78, 0.72),15px 15px 0 rgba(196, 80, 78, 0.7),16px 16px 0 rgba(196, 80, 78, 0.68),17px 17px 0 rgba(196, 80, 78, 0.66),18px 18px 0 rgba(196, 80, 78, 0.64),19px 19px 0 rgba(196, 80, 78, 0.62),20px 20px 0 rgba(196, 80, 78, 0.6),21px 21px 0 rgba(196, 80, 78, 0.58),22px 22px 0 rgba(196, 80, 78, 0.56),23px 23px 0 rgba(196, 80, 78, 0.54),24px 24px 0 rgba(196, 80, 78, 0.52),25px 25px 0 rgba(196, 80, 78, 0.5),26px 26px 0 rgba(196, 80, 78, 0.48),27px 27px 0 rgba(196, 80, 78, 0.46),28px 28px 0 rgba(196, 80, 78, 0.44),29px 29px 0 rgba(196, 80, 78, 0.42),30px 30px 0 rgba(196, 80, 78, 0.4),31px 31px 0 rgba(196, 80, 78, 0.38),32px 32px 0 rgba(196, 80, 78, 0.36),33px 33px 0 rgba(196, 80, 78, 0.34),34px 34px 0 rgba(196, 80, 78, 0.32),35px 35px 0 rgba(196, 80, 78, 0.3),36px 36px 0 rgba(196, 80, 78, 0.28),37px 37px 0 rgba(196, 80, 78, 0.26),38px 38px 0 rgba(196, 80, 78, 0.24),39px 39px 0 rgba(196, 80, 78, 0.22),40px 40px 0 rgba(196, 80, 78, 0.2),41px 41px 0 rgba(196, 80, 78, 0.18),42px 42px 0 rgba(196, 80, 78, 0.16),43px 43px 0 rgba(196, 80, 78, 0.14),44px 44px 0 rgba(196, 80, 78, 0.12),45px 45px 0 rgba(196, 80, 78, 0.1),46px 46px 0 rgba(196, 80, 78, 0.08),47px 47px 0 rgba(196, 80, 78, 0.06),48px 48px 0 rgba(196, 80, 78, 0.04),50px 50px 0 rgba(196, 80, 78, 0);
+    text-align: center;
+    margin-bottom: 80px;
+  }
+
+
+  .demo-container {
+    width: 300px;
+    display: inline-block;
+    margin: 0 50px;
+  }
+
+   footer {
+    height: 70px;
+    overflow: hidden;
+    line-height: 70px;
+    display: block;
+    color: #fff;
+    background: #313131;
+    font-size: 11px;
+    font-family: 'Open Sans';
+    font-weight: bold;
+    text-align: center;
+  }
